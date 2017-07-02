@@ -141,6 +141,7 @@ a {
 
 img {
 	width: 100%;
+    height: auto; /*added*/
 }
 
 .inline {
@@ -163,12 +164,13 @@ img {
 }
 
 .icon {
-	padding: 0 10px;
+	padding: 0 0;
 	cursor: pointer;
 	color: #585858;
+    font-size: 15px;
 }
 
-.icon:hover {
+.icon:hover{
 	color: #629883;
 }
 
@@ -258,7 +260,7 @@ h1 {
 	color: #575756;
 }
 
-.tag {
+.tag, #categories-3 ul a, #content .post-box p>a:not(.date) {
 	color: #629883;
 	text-transform: uppercase;
 	font-size: 13px;
@@ -316,13 +318,16 @@ h1 {
 	text-align: right;
 }
 
-.aside-titles {
+.aside-titles, .widgettitle {
 	color: #575756;
 	font-weight: 700;
 	position: relative;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
 }
 
-.aside-titles:after {
+.aside-titles:after, .aside .widgettitle:after {
 	content: '';
     width: 70%;
     height: 3px;
@@ -332,8 +337,12 @@ h1 {
     right: 3px;
 }
 
-.sidebar li {
+.sidebar-box li {
 	padding: 10px 0;
+}
+
+.sidebar-box ul {
+	list-style-type: none;
 }
 
 .wrapper-aside {
@@ -344,17 +353,23 @@ h1 {
 	margin-bottom: 40px;
 }
 
-.mini-title {
+.mini-title, .mini-posts {
 	margin-bottom: 10px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    list-style-type: none;
+    margin-top: 10px;
 }
 
 .mini-posts a {
 	color: #333;
 	opacity: 1;
 	transition: .2s;
+}
+
+.mini-posts img {
+	margin: 0;
 }
 
 .mini-posts a:hover{
@@ -376,7 +391,7 @@ h1 {
 }
 
 .column img {
-	height: 300px;
+	height: 300px !important;
 	padding: 0 0 30px 0;
 }
 
@@ -388,7 +403,11 @@ h4 {
 	font-weight: 400;
 }
 
-.hygge-text {
+#footer li {
+    list-style-type: none;
+}
+
+.hygge-text, #text-2 p {
 	color: #111;
 	line-height: 1.6;
 	padding-bottom: 30px;
@@ -417,4 +436,13 @@ h4 {
 .alignright {
 	float: right;
 }
+
+/* related posts */
+
+.relatedposts {width: 640px; margin: 0 0 20px 0; float: left; font-size: 12px;}
+.relatedposts h3 {font-size: 20px; margin: 0 0 5px 0; }
+.relatedthumb {margin: 0 1px 0 1px; float: left; }
+.relatedthumb img {margin: 0 0 3px 0; padding: 0;}
+.relatedthumb a {color :#333; text-decoration: none; display:block; padding: 4px; width: 150px;}
+.relatedthumb a:hover {background-color: #ddd; color: #000;}
 

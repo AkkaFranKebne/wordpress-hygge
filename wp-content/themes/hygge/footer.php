@@ -3,17 +3,15 @@
 			<div class="widgets">
 				<div class="column">
 					<h4>Hygge Foundation</h4>
-					<p class="hygge-text">
-						Liquorice bear claw jelly marzipan jelly-o. Gingerbread croissant muffin macaroon jujubes. Brownie cotton candy gummies ice cream pastry topping topping biscuit. Cake donut sesame snaps gingerbread pudding chupa chups fruitcake bonbon icing. Tiramisu wafer cheesecake toffee pastry.
-					</p>
+					<?php dynamic_sidebar('Sidebar 2', array('class' => 'hygge-text')); ?>
 				</div>
 				<div class="column">
 					<h4>Facebook</h4>
-					<img src="<?php bloginfo('template_url')?>/img/widget-fb.png" alt="facebook-widget">
+					<?php dynamic_sidebar('Sidebar 3'); ?>
 				</div>
 				<div class="column">
 					<h4>Instagram</h4>
-					<img src="<?php bloginfo('template_url')?>/img/widget-in.png" alt="instagram-widget">
+					<?php dynamic_sidebar('Sidebar 4'); ?>
 				</div>
 			</div>
 		</div>

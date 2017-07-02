@@ -14,17 +14,11 @@
 		<div class="top-bar">
 			<div class="wrapper">
 				<div class="inline">
-					<span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
-					<span class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
-					<span class="icon"><i class="fa fa-pinterest" aria-hidden="true"></i></span>
-					<span class="icon"><i class="fa fa-camera-retro" aria-hidden="true"></i></span>
+                    <?php wp_nav_menu(array('menu'=>'Social Menu')); ?>
 				</div>
 				<nav class="inline alignright">
 					<ul class="menu">
-						<li class="menu-item"><a href="#">home</a></li>
-						<li class="menu-item"><a href="#">about</a></li>
-						<li class="menu-item"><a href="#">contact</a></li>
-						<li class="menu-item"><a href="#">all posts</a></li>
+                        <?php wp_nav_menu(array('menu'=>'Main Menu')); ?>
 					</ul>
 				</nav>
 			</div>
@@ -32,18 +26,31 @@
 		<div class="wrapper">
 			<div class="logo-box aligncenter">
 				<p class="aside-text">since<span class="logo"><i class="fa fa-coffee" aria-hidden="true"></i></span>2001</p>
-				<h1>hygge</h1>
-				<p class="sentence">Your happiness. We care.</p>
+				<h1><?php echo get_bloginfo('name'); ?></h1>
+				<p class="sentence"><?php echo get_bloginfo('description'); ?></p>
 			</div>
 		</div>
 	</header>
     	<section>
 		<div class="photo-wrapper">
 			<div class="photo-box">
-				<img src="<?php bloginfo('template_url')?>/img/img1.jpg" alt=''>
+                    <?php
+                    $post_id = 53;
+                    $queried_post = get_post($post_id);
+                    //$title = $queried_post->post_title;
+                    //echo $title;
+                    echo $queried_post->post_content;
+                    ?>
 			</div>
 			<div class="photo-box">
-				<img src="<?php bloginfo('template_url')?>/img/img2.jpg" alt=''>
+                    <?php
+                    $post_id = 54;
+                    $queried_post = get_post($post_id);
+                    //$title = $queried_post->post_title;
+                    //echo $title;
+                    echo $queried_post->post_content;
+                    ?>
 			</div>
 		</div>
+            
 	</section>
