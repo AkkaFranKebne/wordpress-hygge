@@ -437,12 +437,47 @@ h4 {
 	float: right;
 }
 
-/* related posts */
+/* form */
 
-.relatedposts {width: 640px; margin: 0 0 20px 0; float: left; font-size: 12px;}
-.relatedposts h3 {font-size: 20px; margin: 0 0 5px 0; }
-.relatedthumb {margin: 0 1px 0 1px; float: left; }
-.relatedthumb img {margin: 0 0 3px 0; padding: 0;}
-.relatedthumb a {color :#333; text-decoration: none; display:block; padding: 4px; width: 150px;}
-.relatedthumb a:hover {background-color: #ddd; color: #000;}
+#pcf7-f103-p61-o1 {
+    width: 100%;    
+}
+
+form  {
+    display: block;
+    margin-top: 20px;
+}
+
+form label, form p {
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    padding: 6px;
+}
+
+input {
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+}
+
+textarea {
+    width: 90%;
+    height: 300px;
+    font-size: 20px;   
+    border: 1px solid lightgrey;
+    resize: none;
+}
+
+input[type=submit] {
+    width: 100px;
+    margin-top: 20px;
+    padding:5px 15px; 
+    background:#629883; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    color: white;
+}
 

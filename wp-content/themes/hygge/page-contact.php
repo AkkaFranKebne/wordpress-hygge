@@ -10,19 +10,12 @@
 				/* Start the Loop */
 				while ( have_posts() ) : the_post(); ?>
                    <div class='post-box'>
-				        <p class='aside-text aligncenter'>
-				            <a href='#' class='date'> 
-                                <?php the_date(); ?>
-                            </a>    
-                        </p>
                     <h2 class="post-title aligncenter">    
                         <a href="<?php the_permalink(); ?>"> 
                                 <?php echo the_title();  ?> 
                         </a>     
                     </h2>
-                    <p class='aligncenter'>
-		                       <?php echo get_the_category_list(" | ");?>	
-                     </p>
+
                        
                        <?php
                        
@@ -31,9 +24,9 @@
                         endif;                       
                        ?>
                     <p class='main-text'>
-                                <?php echo get_the_content(); ?>
+                                <?php echo the_content(); ?>
                     </p>
-                       <span class="more-text tag">continue reading ➙</span>
+
                     </div>
 				<?php
         
@@ -45,14 +38,11 @@
 	
 	</div><!-- #content -->
  			</div>
-			<span class="more-text tag alignright">
 
-                <?php posts_nav_link('  ','<- previous posts','more posts ->'); ?> 
-            </span>
 		</main>
   
 <?php get_sidebar() ?> 
-<?php echo get_template_part('related-posts-single' ); ?>
+<?php echo get_template_part('related-posts' ); ?>
 					</ul>
 				</div>
                 

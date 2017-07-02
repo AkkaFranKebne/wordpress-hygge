@@ -33,6 +33,7 @@
                     <p class='main-text'>
                                 <?php echo get_the_content(); ?>
                     </p>
+                       <span class="more-text tag">continue reading ➙</span>
                     </div>
 				<?php
         
@@ -46,7 +47,7 @@
  			</div>
 			<span class="more-text tag alignright">
 
-                <?php posts_nav_link('  ','<- previous posts','more posts ->'); ?> 
+                <?php posts_nav_link('  ','<- previous posts','more posts ➙'); ?> 
             </span>
 		</main>
   
